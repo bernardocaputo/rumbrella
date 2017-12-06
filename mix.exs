@@ -5,6 +5,8 @@ defmodule Rumbrella.Mixfile do
     [
       apps_path: "apps",
       start_permanent: Mix.env == :prod,
+      deps_path: "../../deps",
+      lockfile: "../../mix.lock",
       deps: deps()
     ]
   end
@@ -14,7 +16,7 @@ defmodule Rumbrella.Mixfile do
   # the apps folder.
   #
   # Run "mix help deps" for examples and options.
-  defp deps do
-    []
+  def deps do
+    [{:sweet_xml, "~> 0.5.0"}]
   end
 end
